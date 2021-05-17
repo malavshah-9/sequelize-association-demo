@@ -15,7 +15,7 @@ class DBConnection {
         force: true,
       })
       .then((data) => {
-        console.log(" Synchronized ", data);
+        console.log(" Schema Synchronized ");
       })
       .catch((e) => {
         console.log(" error ", e);

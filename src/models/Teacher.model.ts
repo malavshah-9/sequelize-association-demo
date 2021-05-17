@@ -26,6 +26,11 @@ Teacher.init(
   }
 );
 
+classModel.hasOne(Teacher, {
+  onDelete: "RESTRICT",
+  onUpdate: "CASCADE",
+  foreignKey: "teacherId",
+});
 Teacher.belongsTo(classModel, {
   targetKey: "id",
 });

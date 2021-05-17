@@ -7,10 +7,15 @@ Class.init(
   {
     room_number: {
       type: DataTypes.INTEGER,
-      primaryKey: true,
+      allowNull: false,
     },
     building_code: {
       type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    id: {
+      type: DataTypes.INTEGER,
+      autoIncrement: true,
       primaryKey: true,
     },
   },
@@ -20,9 +25,5 @@ Class.init(
     modelName: "class",
   }
 );
-Class.hasOne(Teacher, {
-  onDelete: "RESTRICT",
-  onUpdate: "CASCADE",
-  foreignKey: "teacherId",
-});
+
 export default Class;

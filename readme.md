@@ -4,7 +4,7 @@
 
 - [ ] Subject -> Many to Many -> Teacher
 - [ ] Class -> One to Many -> Students
-- [ ] Class -> One to One -> Teacher
+- [x] Class -> One to One -> Teacher
 
 ## Entities
 
