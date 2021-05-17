@@ -2,9 +2,9 @@
 
 ## Below relations are covered with typical example of class, student and teacher
 
-- [] Subject -> Many to Many -> Teacher
-- [] Class -> One to Many -> Students
-- [] Class -> One to One -> Teacher
+- [ ] Subject -> Many to Many -> Teacher
+- [ ] Class -> One to Many -> Students
+- [ ] Class -> One to One -> Teacher
 
 ## Entities
 
