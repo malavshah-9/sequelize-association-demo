@@ -1,4 +1,6 @@
 import sequelize from "../service/sequelize";
+import TeacherModel from "./Teacher.model";
+import SubjectTeacher from "./SubjectTeacher.model";
 import { Model, DataTypes } from "sequelize";
 
 class Subject extends Model {}
@@ -24,4 +26,11 @@ Subject.init(
     modelName: "subject",
   }
 );
+TeacherModel.hasMany(Subject);
+Subject.belongsToMany(TeacherModel, {
+  through: {
+    model: SubjectTeacher,
+    unique: true,
+  },
+});
 export default Subject;

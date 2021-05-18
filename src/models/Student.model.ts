@@ -1,5 +1,6 @@
 import sequelize from "../service/sequelize";
 import { Model, DataTypes } from "sequelize";
+import classModel from "./Class.model";
 
 class Student extends Model {}
 Student.init(
@@ -24,4 +25,13 @@ Student.init(
     modelName: "student",
   }
 );
+Student.belongsTo(classModel, {
+  targetKey: "id",
+  foreignKey: {
+    name: "ClassesId",
+  },
+});
+classModel.hasMany(Student, {
+  sourceKey: "id",
+});
 export default Student;
